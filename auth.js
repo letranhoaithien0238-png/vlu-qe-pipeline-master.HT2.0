@@ -1,18 +1,16 @@
 function login(username, password) {
-    // Không cho phép username hoặc password rỗng
+    // Cập nhật chức năng đăng nhập trên feature/update-login
+
     if (!username || !password) {
         return false;
     }
 
-    // Giả lập tài khoản admin đang hoạt động
     const lockedAccounts = ["lockedUser"];
 
-    // Kiểm tra tài khoản bị khóa
     if (lockedAccounts.includes(username)) {
         return false;
     }
 
-    // Đăng nhập hợp lệ
     if (username === "admin" && password === "123") {
         return true;
     }
